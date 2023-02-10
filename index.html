@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+
+      rel="stylesheet"
+
+    />
+    <link rel="python" href="main.py"/>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Converter</title>
+
+  </head>
+
+  <body>
+
+
+    <nav>
+
+      <div class="heading">
+
+        <h4>Say & Read</h4>
+
+      </div>
+
+      <ul class="nav-links">
+
+      
+
+
+      </ul>
+
+    </nav>
+    <div class="body-text"><h1>Convert Audio to Text!</h1>
+    
+    </div>
+    <button type="submit" onclick="main.py">Choose File</button>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<! -- This script runs the python script on the page load -->
+<script>
+    function myfunction_onload(){
+        $.ajax({
+            url: "main.py",
+             context: document.body
+            })
+        }
+    </script>
+<! -- This script runs the python script when the button is clicked -->
+<script>
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"/test",
+            context: document.body});}
+</script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <div class="icon">
+    <lord-icon
+        src="https://cdn.lordicon.com/psseymno.json"
+        trigger="hover"
+        style="width:350px;height:350px">
+    </lord-icon>
+  </div>
+
+  
+
+  </body>
+
+</html>
